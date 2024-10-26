@@ -15,6 +15,9 @@ public class Pessoa {
         this.account = account;
     }
 
+    public Pessoa(int id){
+        this.id = id;
+    }
     public Pessoa() {
     }
     public int getId() {
@@ -47,5 +50,12 @@ public class Pessoa {
     public void setAccount(Login account) {
         this.account = account;
     }
+
+    @Override
+    public String toString() {
+        return "Pessoa [id=" + id + ", nome=" + nome + ", idade=" + idade + ", cpf=" + cpf + "]\n"+ account.toString();
+    }
+
+    
     
 }

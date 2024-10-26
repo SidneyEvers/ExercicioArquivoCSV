@@ -49,4 +49,9 @@ public class Login {
 
     }
 
+    @Override
+    public String toString() {
+        return "Login [userName=" + userName + ", passWord=" + passWord + ", nivelAcesso=" + nivelAcesso + "]";
+    }
+
 }
