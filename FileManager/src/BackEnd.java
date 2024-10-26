@@ -43,9 +43,19 @@ abstract class BackEnd {
             }
         }else if(escolha == 3){
             System.out.println("Em desenolvimento");
-        }else{
-            System.out.println("Opção inválida");
+        }else if(escolha == 4){
+            if(user.getAccount().getNivelAcesso() < 8){
+                AcesIn();
+            }else{
+
+                ShowNivel(usuarios, user);
+                System.out.println("Qual ID da conta que deseja remover?");
+                int idEscolha = Commom.ToInt(scan.nextLine());
+                int index = ChecaNivel(usuarios, user.getAccount().getNivelAcesso(), idEscolha);
+                
+            }
         }
+
 
     } 
 
